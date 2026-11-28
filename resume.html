@@ -1,0 +1,501 @@
+
+<!--
+Ryan Brady
+IS 201 Online
+November 26, 2026
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Ryan Brady | Resume</title>
+
+    <style>
+
+        :root {
+            --cream: #f7f4ed;
+            --navy: #192c40;
+            --red: #a34440;
+            --gray: #626262;
+            --border: #d9d5cc;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            background-color: var(--cream);
+            color: var(--navy);
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.8;
+        }
+
+        h1, h2, h3 {
+            font-family: Georgia, "Times New Roman", serif;
+            line-height: 1.2;
+        }
+
+        a {
+            color: var(--red);
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* Website Header */
+
+        header {
+            text-align: center;
+            padding: 30px 20px 0;
+            border-top: 6px solid var(--navy);
+        }
+
+        .logo {
+            display: inline-block;
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: clamp(45px, 9vw, 86px);
+            font-weight: bold;
+            letter-spacing: 5px;
+            color: var(--navy);
+            margin-bottom: 25px;
+            line-height: 1.2;
+        }
+
+        .logo:hover {
+            text-decoration: none;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 30px;
+            padding: 16px 10px;
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+        }
+
+        nav a {
+            color: var(--navy);
+            font-size: 13px;
+            font-weight: bold;
+        }
+
+        nav a:hover,
+        nav a.active {
+            color: var(--red);
+        }
+
+        /* Resume Layout */
+
+        .resume {
+            max-width: 900px;
+            margin: 45px auto;
+            padding: 0 25px;
+        }
+
+        .profile {
+            display: flex;
+            align-items: center;
+            gap: 35px;
+            padding-bottom: 35px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .headshot {
+            width: 190px;
+            height: 240px;
+            object-fit: cover;
+            border-radius: 4px;
+        }
+
+        .profile h1 {
+            font-size: 48px;
+            margin: 0 0 10px;
+        }
+
+        .subtitle {
+            color: var(--red);
+            font-weight: bold;
+            font-size: 17px;
+        }
+
+        .profile p {
+            margin: 5px 0;
+        }
+
+        .resume-navigation {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 25px;
+            padding: 20px 0;
+            border-bottom: 1px solid var(--border);
+            font-size: 13px;
+            font-weight: bold;
+        }
+
+        /* Resume Sections */
+
+        .resume-section {
+            padding: 30px 0;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .resume-section h2 {
+            font-size: 30px;
+            margin: 0 0 25px;
+        }
+
+        .resume-section h3 {
+            font-size: 22px;
+            margin: 20px 0 5px;
+        }
+
+        .details {
+            color: var(--gray);
+            font-size: 15px;
+            margin: 0;
+        }
+
+        .resume-section ul {
+            padding-left: 22px;
+            color: #333333;
+        }
+
+        .resume-section li {
+            margin-bottom: 6px;
+        }
+
+        .experience {
+            margin-bottom: 30px;
+        }
+
+        /* Skills Layout */
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 35px;
+        }
+
+        .skills-grid h3 {
+            margin-top: 0;
+        }
+
+        .back-top {
+            display: block;
+            text-align: center;
+            margin: 35px 0;
+            font-size: 13px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Footer */
+
+        footer {
+            border-top: 1px solid var(--border);
+            padding: 30px 20px;
+            text-align: center;
+        }
+
+        .footer-logo {
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 26px;
+            font-weight: bold;
+            letter-spacing: 3px;
+            color: var(--navy);
+        }
+
+        footer p {
+            color: var(--gray);
+            font-size: 12px;
+        }
+
+        /* Mobile Design */
+
+        @media (max-width: 700px) {
+
+            .profile {
+                flex-direction: column;
+                text-align: center;
+                gap: 20px;
+            }
+
+            .profile h1 {
+                font-size: 36px;
+            }
+
+            .headshot {
+                width: 160px;
+                height: 200px;
+            }
+
+            .skills-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            nav {
+                gap: 15px;
+            }
+
+            .resume-navigation {
+                justify-content: center;
+                gap: 15px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+<body id="top">
+
+    <!-- Website Header -->
+
+    <header>
+
+        <a href="index.html" class="logo">BASEBALL</a>
+
+        <nav>
+
+            <a href="index.html">Home</a>
+
+            <a href="index.html#history">Baseball History</a>
+
+            <a href="index.html#today">Baseball Today</a>
+
+            <a href="index.html#road">The Road to the Big Leagues</a>
+
+            <a href="index.html#about">About Me</a>
+
+            <a href="resume.html" class="active">Resume</a>
+
+        </nav>
+
+    </header>
+
+    <main class="resume">
+
+        <!-- Personal Profile -->
+
+        <div class="profile">
+
+            <img
+                src="Stormchaser_headshot.jpeg"
+                alt="Ryan Brady professional baseball headshot"
+                class="headshot">
+
+            <div>
+
+                <h1>Ryan Brady</h1>
+
+                <p class="subtitle">Professional Baseball Player</p>
+
+                <p>Right-Handed Pitcher</p>
+
+                <p>Herriman, Utah</p>
+
+                <p>
+                    <a href="https://www.linkedin.com/in/ryan-brady-rb/"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        LinkedIn Profile
+                    </a>
+                </p>
+
+            </div>
+
+        </div>
+
+        <!-- Resume Navigation -->
+
+        <div class="resume-navigation">
+
+            <a href="#edu">Education</a>
+
+            <a href="#exp">Experience</a>
+
+            <a href="#ski">Skills</a>
+
+            <a href="#acc">Accomplishments</a>
+
+        </div>
+
+        <!-- Education -->
+
+        <section class="resume-section" id="edu">
+
+            <h2>Education</h2>
+
+            <h3>Brigham Young University</h3>
+
+            <p class="details">General Studies — Business Emphasis</p>
+
+            <p class="details">Expected Graduation: 2027</p>
+
+            <ul>
+                <li>BYU Independent Study</li>
+                <li>Three seasons of collegiate baseball at BYU</li>
+            </ul>
+
+        </section>
+
+        <!-- Professional Experience -->
+
+        <section class="resume-section" id="exp">
+
+            <h2>Professional Experience</h2>
+
+            <div class="experience">
+
+                <h3>Kansas City Royals Organization</h3>
+
+                <p class="details">
+                    Professional Baseball Player | December 2023–2026
+                </p>
+
+                <ul>
+                    <li>Right-handed relief pitcher.</li>
+                    <li>Advanced to the Triple-A level.</li>
+                    <li>Competed in professional baseball while managing
+                        a demanding game and travel schedule.</li>
+                    <li>Developed skills in preparation, adaptability,
+                        teamwork, and performance under pressure.</li>
+                </ul>
+
+            </div>
+
+            <div class="experience">
+
+                <h3>Milwaukee Brewers Organization</h3>
+
+                <p class="details">
+                    Professional Baseball Player | 2022–2023
+                </p>
+
+                <ul>
+                    <li>Signed a minor league contract following
+                        three seasons at BYU.</li>
+                    <li>Advanced to the Double-A level.</li>
+                    <li>Transitioned from a starting pitcher
+                        to a professional relief pitcher.</li>
+                    <li>Traded to the Kansas City Royals organization
+                        in December 2023.</li>
+                </ul>
+
+            </div>
+
+            <div class="experience">
+
+                <h3>Youth Baseball Coach</h3>
+
+                <ul>
+                    <li>Coaching and developing young baseball players.</li>
+                    <li>Sharing professional baseball knowledge
+                        and experience.</li>
+                </ul>
+
+            </div>
+
+        </section>
+
+        <!-- Skills -->
+
+        <section class="resume-section" id="ski">
+
+            <h2>Skills</h2>
+
+            <div class="skills-grid">
+
+                <div>
+
+                    <h3>Professional Skills</h3>
+
+                    <ul>
+                        <li>Leadership</li>
+                        <li>Teamwork</li>
+                        <li>Communication</li>
+                        <li>Adaptability</li>
+                        <li>Time management</li>
+                        <li>Performance under pressure</li>
+                        <li>Baseball coaching</li>
+                        <li>Pitching and player development</li>
+                    </ul>
+
+                </div>
+
+                <div>
+
+                    <h3>Business &amp; Technical Skills</h3>
+
+                    <ul>
+                        <li>Database design and development</li>
+                        <li>Entity relationship diagrams</li>
+                        <li>Structured Query Language (SQL)</li>
+                        <li>Tableau</li>
+                        <li>Microsoft Excel Solver</li>
+                        <li>Pivot tables and charts</li>
+                        <li>HTML, CSS, and Bootstrap</li>
+                        <li>Flowchart diagramming</li>
+                        <li>VBA programming in Excel</li>
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- Accomplishments -->
+
+        <section class="resume-section" id="acc">
+
+            <h2>Career Accomplishments</h2>
+
+            <ul>
+                <li>Earned a professional baseball contract in 2022.</li>
+                <li>Reached Double-A with the Milwaukee Brewers organization.</li>
+                <li>Reached Triple-A with the Kansas City Royals organization.</li>
+                <li>Competed professionally from 2022 to 2026.</li>
+                <li>Played three seasons of collegiate baseball at BYU.</li>
+            </ul>
+
+        </section>
+
+        <a href="#top" class="back-top">
+            &uarr; Back to Top
+        </a>
+
+    </main>
+
+    <!-- Footer -->
+
+    <footer>
+
+        <a href="index.html" class="footer-logo">BASEBALL</a>
+
+        <p>The Game. The History. The Journey.</p>
+
+        <p>&copy; 2026 Ryan Brady. All rights reserved.</p>
+
+    </footer>
+
+</body>
+
+</html>
